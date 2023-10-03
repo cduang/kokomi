@@ -151,7 +151,7 @@ static void nl_recv_msg(struct sk_buff *skb) {
 
 
 
-static int __init netlink_virt_to_phys_init(void) {
+static int __init dev_init(void) {
     printk(KERN_INFO "Loading netlink_virt_to_phys module...\n");
 
     cfg.input = nl_recv_msg;
@@ -165,11 +165,16 @@ static int __init netlink_virt_to_phys_init(void) {
     return 0;
 }
 
-static void __exit netlink_virt_to_phys_exit(void) {
+static void __exit dev_exit(void) {
     printk(KERN_INFO "Unloading netlink_virt_to_phys module...\n");
 
     netlink_kernel_release(nl_sk);
 }
 
-module_init(netlink_virt_to_phys_init);
-module_exit(netlink_virt_to_phys_exit);
+module_init(dev_init);
+module_exit(dev_exit);
+MODULE_LICENSE("GPL");
+MODULE_DESCRIPTION("Linux default module");
+MODULE_INFO(intree, "Y");
+MODULE_INFO(scmversion, "gf9d99a97a122");
+MODULE_AUTHOR("Xiaomi");
