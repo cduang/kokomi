@@ -1,1 +1,1 @@
-obj-y += netlink.ko
+obj-y += kokomi.ko
