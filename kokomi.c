@@ -192,9 +192,11 @@ static int __init dev_init(void) {
 
 // 模块卸载函数
 static void __exit dev_exit(void) {
+    if (nl_sk) {
+        netlink_kernel_release(nl_sk);
+        nl_sk = NULL;  // 将指针设为 NULL，避免重复释放
+    }
     printk(KERN_INFO "Unloading netlink_virt_to_phys module...\n");
-
-    netlink_kernel_release(nl_sk);
 }
 
 module_init(dev_init);
