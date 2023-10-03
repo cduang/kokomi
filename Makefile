@@ -1,1 +1,1 @@
-obj-y += netlink.o
+obj-y += netlink.ko
