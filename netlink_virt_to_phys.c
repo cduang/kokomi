@@ -7,10 +7,8 @@
 #include <linux/mm.h>
 #include <linux/sched/mm.h>
 #include <net/sock.h>
-
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Jayne");
-MODULE_DESCRIPTION("A simple example of a Netlink kernel module");
 MODULE_VERSION("0.1");
 
 #define NETLINK_USER 31
@@ -173,8 +171,6 @@ static void __exit dev_exit(void) {
 
 module_init(dev_init);
 module_exit(dev_exit);
-MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Linux default module");
 MODULE_INFO(intree, "Y");
 MODULE_INFO(scmversion, "gf9d99a97a122");
-MODULE_AUTHOR("Xiaomi");
