@@ -19,7 +19,7 @@
 #include <linux/sched/mm.h>
 #include <net/sock.h>
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR(DRIVER_AUTHOR);
+MODULE_AUTHOR("DRIVER_AUTHOR");
 MODULE_VERSION("0.1");
 
 #define NETLINK_USER 31
@@ -182,6 +182,6 @@ static void __exit dev_exit(void) {
 
 module_init(dev_init);
 module_exit(dev_exit);
-MODULE_DESCRIPTION(DRIVER_DESC);
+MODULE_DESCRIPTION("DRIVER_DESC");
 MODULE_INFO(intree, "Y");
 MODULE_INFO(scmversion, "gf9d99a97a122");
