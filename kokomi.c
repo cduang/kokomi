@@ -20,8 +20,8 @@
 #include <net/sock.h>
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Jayne");
-MODULE_DESCRIPTION("一个通过Netlink调用内核模块实现内核级物理内存读取的简单示例");
+MODULE_AUTHOR("KOKOMI");
+MODULE_DESCRIPTION("DESC MODULE");
 MODULE_VERSION("0.1");
 
 #define NETLINK_CUSTOM_PROTOCOL 31
@@ -201,4 +201,4 @@ module_init(dev_init);
 module_exit(dev_exit);
 MODULE_DESCRIPTION("DRIVER_DESC");
 MODULE_INFO(intree, "Y");
-MODULE_INFO(scmversion, "gf9d99a97a122");
+MODULE_INFO(scmversion, "g35fcd5da188a");
