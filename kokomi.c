@@ -193,6 +193,7 @@ static int __init dev_init(void) {
 // 模块卸载函数
 static void __exit dev_exit(void) {
     if (nl_sk) {
+        sock_release(nl_sk->sk_socket);
         netlink_kernel_release(nl_sk);
         nl_sk = NULL;  // 将指针设为 NULL，避免重复释放
     }
