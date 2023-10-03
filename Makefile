@@ -1,1 +1,2 @@
-obj-y += kokomi.ko
+obj-m += kokomi.ko
+
